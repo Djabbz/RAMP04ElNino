@@ -14,7 +14,7 @@ class Regressor(BaseEstimator):
     def __init__(self):
         kpca = PCA(n_components=500)
         gbr = BaggingRegressor(base_estimator=GradientBoostingRegressor(n_estimators=200), n_jobs=-1, n_estimators=50)
-        self.reg = make_pipeline(StandardScaler, kpca, gbr)
+        self.reg = make_pipeline(kpca, gbr)
 
     def fit(self, X, y):
         self.reg.fit(X, y)
