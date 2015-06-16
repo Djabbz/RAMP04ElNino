@@ -1,7 +1,7 @@
 from sklearn.base import BaseEstimator
 from sklearn.ensemble import RandomTreesEmbedding
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import KernelPCA, PCA
